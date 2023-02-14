@@ -1,0 +1,155 @@
+body {
+    background-image: url(bgimg.jpg);
+    height: 200vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    color: black;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    
+    
+    border-collapse: collapse;
+    overflow: hidden;
+   padding-top: 20px;
+    
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+
+td {
+    padding: 15px;
+    background-color: rgba(24, 34, 121, 0.884);
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+}
+
+.deleteBtn {
+    color: white;
+    background: rgb(145, 0, 0);
+}
+
+#filterSelect {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+    background: grey;
+    color: white;
+}
+
+
+
+th {
+    padding: 15px;
+    background-color: rgba(0, 2, 20, 0.884);
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+}
+
+
+#navLinks {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.295);
+    width: fit-content;
+}
+
+a {
+    color: antiquewhite;
+    outline: none;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: large;
+}
+
+label {
+    color: black;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+
+}
+
+#addBtn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+    margin-left: 10px;
+}
+
+#saveBtn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
+    margin-left: 10px;
+}
+@media (min-width: 0) and (max-width: 400px) {
+    table {
+        display: contents;
+        transform: translate(-50%, -50%);
+        
+        
+    }
+    #filterSelect {
+        display: none;
+    }
+    label {
+        display: none;
+    }
+    h1 {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+    
+    }
+    
+    h2 {
+        font-family: 'Permanent Marker', cursive;
+        font-size: small;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+    #addBtn {
+        display: none;
+    }
+    
+    td {
+        padding: 15px;
+        background-color: rgba(24, 34, 121, 0.884);
+        color: #fff;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: small;
+    }
+    th {
+        padding: 15px;
+        background-color: rgba(0, 2, 20, 0.884);
+        color: #fff;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: small;
+    }
+    .deleteBtn {
+        display: none;
+    }
+  }
+  
+  

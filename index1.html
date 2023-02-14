@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e6af93275d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style1.css">
+
+    <title>FilmFlux</title>
+</head>
+
+<body>
+    
+    <nav>
+        <button id="toggleButton">&#9776;</button>
+
+        <ul id="navLinks">
+            <li><a href="index1.html">Liste de Films</a></li>
+            <li><a href="index.html">Recherche de Films</a></li>
+        </ul>
+
+        <h1>FilmFlux</h1>
+
+        <h2>Liste de Films</h2>
+
+        <label for="filterSelect">Filter by:</label>
+        <select id="filterSelect">
+            <option value="Aucun">Aucun</option>
+            <option value="title">Titre</option>
+            <option value="year">Année</option>
+        </select>
+        <br>
+        <br>
+
+        <button id="addBtn" class="btn btn-primary">Ajouter</button>
+
+        <br>
+        <br>
+
+
+        <div id="formContainer" style="display:none;">
+            <form id="filmForm">
+                <label for="title">Entrer un titre:</label>
+                <input type="text" id="title" name="title">
+
+                <label for="year">Entrer une année:</label>
+                <input type="text" id="year" name="year">
+
+                <label for="director">Entrer un réalisateur:</label>
+                <input type="text" id="director" name="director">
+
+                <button type="submit" id="saveBtn" class="btn btn-success">Save</button><br><br>
+            </form>
+        </div>
+
+    </nav>
+
+    <div id="table1">
+        <table id="filmTable">
+            <tr>
+                <th>Titre</th>
+                <th>Année</th>
+                <th>Réalisateur</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <script src="assets/js/app1.js"></script>
+</body>
+
+</html>
