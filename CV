@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV David Bastin</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 32px auto;
+      background: #fff;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      padding: 32px 32px 16px 32px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+    header h1 {
+      margin: 0;
+      color: #22385c;
+      font-size: 2.5em;
+    }
+    .subtitle {
+      color: #327ab7;
+      font-size: 1.25em;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .contact {
+      font-size: 1.05em;
+      color: #484848;
+      margin-bottom: 16px;
+    }
+    nav#menu-cv {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+      padding: 6px 0;
+      box-shadow: 0 2px 6px #eee;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav#menu-cv a {
+      color: #22385c;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav#menu-cv a:hover {
+      color: #41b883;
+    }
+    section {
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #22385c;
+      font-size: 1.4em;
+      border-bottom: 2px solid #cad5e2;
+      padding-bottom: 4px;
+      margin-bottom: 13px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h3 {
+      color: #327ab7;
+      font-size: 1.1em;
+      margin-top: 16px;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .job-date {
+      float: right;
+      color: #6c87a1;
+      font-size: 0.97em;
+      font-style: italic;
+    }
+    ul {
+      margin: 0 0 12px 18px;
+      padding: 0;
+    }
+    .skills-bar {
+      margin-bottom: 10px;
+    }
+    .bar-container {
+      background: #eee;
+      border-radius: 12px;
+      margin: 8px 0;
+      height: 16px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .bar {
+      height: 16px;
+      background: linear-gradient(90deg, #327ab7, #41b883);
+      border-radius: 12px 0 0 12px;
+      width: 0;
+      transition: width 1.3s cubic-bezier(0.25, 0.8, 0.45, 1);
+    }
+    .skill-label {
+      font-size: 1em;
+      font-weight: 500;
+      margin-bottom: 0;
+      color: #424242;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    /* Langues section - interactive pills */
+    .lang-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .lang-item {
+      flex: 1 1 140px;
+      background: #ececec;
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .lang-item:hover,
+    .lang-item.active {
+      background: #41b883;
+      color: white;
+      box-shadow: 0 2px 10px rgba(65, 184, 131, 0.6);
+    }
+    .lang-name {
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-level {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+    .lang-details {
+      font-size: 0.9em;
+      margin-top: 6px;
+      display: none;
+    }
+    .lang-item.active .lang-details {
+      display: block;
+    }
+    /* Timeline */
+    .timeline {
+      border-left: 3px solid #327ab7;
+      list-style: none;
+      padding: 0;
+      position: relative;
+      margin-bottom: 25px;
+    }
+    .timeline li {
+      position: relative;
+      padding: 16px 0 16px 24px;
+    }
+    .timeline li:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #327ab7;
+      position: absolute;
+      left: -9px;
+      top: 24px;
+    }
+    .year {
+      color: #327ab7;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .interet-list {
+      margin-left: 18px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.15em;
+      }
+      .lang-list {
+        flex-direction: column;
+      }
+      .lang-item {
+        flex: 1 1 100%;
+      }
+    }
+    .clearfix {
+      clear: both;
+    }
+    /* Scroll up button */
+    #btn_top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      background: #22385c;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px #aaa;
+      z-index: 999;
+      text-decoration: none;
+      display: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #btn_top:hover {
+      background: #41b883;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-user-tie"></i> David BASTIN</h1>
+      <div class="subtitle">
+        <i class="fas fa-user-cog"></i> Directeur Drive — Directeur Adjoint — Manager Senior Retail & Distribution
+      </div>
+      <div class="contact">
+        <i class="fas fa-location-dot"></i> Agen (47000) &nbsp;|&nbsp;
+        <i class="fas fa-phone"></i> 06 46 66 36 67 &nbsp;|&nbsp;
+        <i class="fas fa-envelope"></i> basdav@gmail.com
+      </div>
+    </header>
+
+    <nav id="menu-cv">
+      <a href="#profil"><i class="fa fa-id-badge"></i> Profil</a>
+      <a href="#competences"><i class="fa fa-tasks"></i> Compétences</a>
+      <a href="#experiences"><i class="fa fa-briefcase"></i> Expérience</a>
+      <a href="#formations"><i class="fa fa-certificate"></i> Formation</a>
+      <a href="#langues"><i class="fa fa-language"></i> Langues</a>
+      <a href="#interets"><i class="fa fa-lightbulb"></i> Centres d’intérêt</a>
+    </nav>
+
+    <section id="profil">
+      <h2><i class="fas fa-id-badge"></i> Profil Professionnel</h2>
+      <p>
+        Directeur Drive et Manager senior doté de plus de 15 ans d'expérience dans la grande distribution : expert en management d’équipes, pilotage de la performance commerciale, gestion opérationnelle et digitalisation des services Drive. Solide expérience en stratégie commerciale, transformation digitale du retail et optimisation des processus. En recherche de nouveau défi au sein d’une enseigne innovante.
+      </p>
+    </section>
+
+    <section id="competences">
+      <h2><i class="fas fa-tasks"></i> Compétences Clés</h2>
+      <div class="skills-bar">
+        <span class="skill-label"><i class="fas fa-users"></i> Management d’équipe</span>
+        <div class="bar-container"><div class="bar" data-width="96"></div></div>
+        <span class="skill-label"><i class="fas fa-chart-line"></i> Pilotage commercial (CA, marges, stocks, KPI)</span>
+        <div class="bar-container"><div class="bar" data-width="93"></div></div>
+        <span class="skill-label"><i class="fas fa-bullseye"></i> Stratégie commerciale & relation client</span>
+        <div class="bar-container"><div class="bar" data-width="92"></div></div>
+        <span class="skill-label"><i class="fas fa-laptop-code"></i> Digitalisation & transformation digitale</span>
+        <div class="bar-container"><div class="bar" data-width="90"></div></div>
+        <span class="skill-label"><i class="fas fa-cogs"></i> Gestion opérationnelle & reporting</span>
+        <div class="bar-container"><div class="bar" data-width="95"></div></div>
+        <span class="skill-label"><i class="fas fa-handshake"></i> Négociation fournisseurs & merchandising</span>
+        <div class="bar-container"><div class="bar" data-width="85"></div></div>
+        <span class="skill-label"><i class="fas fa-toolbox"></i> Outils & technos</span>
+        <div class="bar-container"><div class="bar" data-width="88"></div></div>
+      </div>
+      <ul>
+        <li>Management d’équipe, leadership, gestion RH (recrutement, formation)</li>
+        <li>Pilotage commercial : suivi CA, marges, stocks, indicateurs clés (KPI)</li>
+        <li>Stratégie commerciale, développement relation client, fidélisation</li>
+        <li>Digitalisation : e-commerce, Drive, transformation digitale, optimisation des process</li>
+        <li>Gestion opérationnelle : inventaire, reporting, gestion de budget, marketing terrain</li>
+        <li>Négociation fournisseurs, gestion assortiment, merchandising</li>
+        <li>Outils et technologies : 
+          <span title="Word avancé"><i class="fab fa-microsoft"></i> Word</span>, 
+          <span title="Excel avancé"><i class="fab fa-microsoft"></i> Excel</span>, 
+          <span title="Photoshop créatif"><i class="fab fa-adobe"></i> Photoshop</span>, 
+          <span title="Illustrator graphique"><i class="fab fa-adobe"></i> Illustrator</span>, 
+          <span title="Python maîtrise avancée"><i class="fab fa-python"></i></span>, 
+          <span title="PHP expert"><i class="fab fa-php"></i></span>, 
+          <span title="HTML5"><i class="fab fa-html5"></i></span>, 
+          <span title="CSS3"><i class="fab fa-css3-alt"></i></span>, 
+          <span title="Javascript"><i class="fab fa-js"></i></span>, 
+          <span title="MySQL"><i class="fas fa-database"></i> MySQL</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experiences">
+      <h2><i class="fas fa-briefcase"></i> Expérience Professionnelle</h2>
+      <ul class="timeline">
+        <li>
+          <div class="year">2023 – Aujourd'hui</div>
+          <div class="job"><strong>Directeur Adjoint</strong> – So Bio Agen
+            <button onclick="toggleExp('expSoBio')" style="background:none;border:none;cursor:pointer;font-size:1em;">
+              <i class="fa fa-chevron-right" id="ico-expSoBio"></i> Détails
+            </button>
+            <div id="expSoBio" style="display:none;">
+              <ul>
+                <li>Pilotage et optimisation de l’activité magasin</li>
+                <li>Management d’équipe pluridisciplinaire</li>
+                <li>Mise en place de la politique commerciale et RSE</li>
+                <li>Mots-clés : management, pilotage opérationnel, politique RSE</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year">2020 – 2022</div>
+          <div class="job"><strong>Directeur Drive</strong> – Intermarché Agen
+            <button onclick="toggleExp('expIntermarche')" style="background:none;border:none;cursor:pointer;font-size:1em;">
+              <i class="fa fa-chevron-right" id="ico-expIntermarche"></i> Détails
+            </button>
+            <div id="expIntermarche" style="display:none;">
+              <ul>
+                <li>Management & animation de 15 collaborateurs</li>
+                <li>Gestion du processus de recrutement</li>
+                <li>Formation et accompagnement des équipes</li>
+                <li>Digitalisation et optimisation du service Drive</li>
+                <li>Suivi de la performance et déploiement d’actions commerciales</li>
+                <li>Mots-clés : management d’équipe, digitalisation, Drive, performance commerciale, indicateurs clés</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year">2018 – 2020</div>
+          <div class="job"><strong>Directeur Drive</strong> – E.Leclerc Agen
+            <button onclick="toggleExp('expLeclerc20182020')" style="background:none;border:none;cursor:pointer;font-size:1em;">
+              <i class="fa fa-chevron-right" id="ico-expLeclerc20182020"></i> Détails
+            </button>
+            <div id="expLeclerc20182020" style="display:none;">
+              <ul>
+                <li>Gestion des stocks, marges, CA et approvisionnements</li>
+                <li>Création d’un point retrait, animation commerciale</li>
+                <li>Reporting, inventaire, management transversal</li>
+                <li>Mots-clés : gestion opérationnelle, création de service, stratégie commerciale</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Autres expériences... -->
+      </ul>
+    </section>
+
+    <section id="formations">
+      <h2><i class="fas fa-certificate"></i> Formations & Certifications</h2>
+      <ul>
+        <li><strong>Développeur Web & Mobile (Bac+2)</strong> – AFPA, Territoire Digitale (2022 – en cours)</li>
+        <li><strong>Baccalauréat Gestion</strong> – Lycée la Compassion</li>
+        <li><strong>BEP Comptabilité</strong></li>
+      </ul>
+    </section>
+
+    <section id="langues">
+      <h2><i class="fas fa-language"></i> Langues</h2>
+      <div class="lang-list">
+        <div class="lang-item active" onclick="toggleLang(this)">
+          <div class="lang-name"><i class="fas fa-comment"></i> Français</div>
+          <div class="lang-level">Natif</div>
+          <div class="lang-details">
+            <strong>Compréhension écrite :</strong> Parfaite<br />
+            <strong>Expression orale :</strong> Parfaite<br />
+            <strong>Usage professionnel :</strong> Expert
+          </div>
+        </div>
+        <div class="lang-item" onclick="toggleLang(this)">
+          <div class="lang-name"><i class="fas fa-comment"></i> Anglais</div>
+          <div class="lang-level">Intermédiaire supérieur</div>
+          <div class="lang-details">
+            <strong>Compréhension écrite :</strong> Très bonne<br />
+            <strong>Expression orale :</strong> Bonne<br />
+            <strong>Usage professionnel :</strong> Opérationnel
+          </div>
+        </div>
+      </div>
+      <small style="display: block; color: #6c87a1; margin-top: 8px;">
+        <i class="fas fa-info-circle"></i> Cliquez sur une langue pour afficher/masquer les détails.
+      </small>
+    </section>
+
+    <section id="interets">
+      <h2><i class="fas fa-lightbulb"></i> Centres d’Intérêt</h2>
+      <ul class="interet-list">
+        <li>Transformation digitale du retail</li>
+        <li>Innovation & management agile</li>
+        <li>Développement web, nouvelles technologies</li>
+      </ul>
+    </section>
+  </div>
+
+  <a href="#" id="btn_top" title="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    window.onload = function () {
+      document.querySelectorAll(".bar").forEach(function (bar) {
+        var width = bar.getAttribute("data-width");
+        bar.style.width = width + "%";
+      });
+    };
+
+    function toggleExp(id) {
+      const div = document.getElementById(id);
+      const icon = document.getElementById("ico-" + id);
+      if (div.style.display === "none") {
+        div.style.display = "block";
+        if (icon) icon.classList.replace("fa-chevron-right", "fa-chevron-down");
+      } else {
+        div.style.display = "none";
+        if (icon) icon.classList.replace("fa-chevron-down", "fa-chevron-right");
+      }
+    }
+
+    function toggleLang(elem) {
+      elem.classList.toggle("active");
+    }
+
+    window.onscroll = function () {
+      var btn = document.getElementById("btn_top");
+      btn.style.display = window.scrollY > 200 ? "flex" : "none";
+    };
+
+    document.getElementById("btn_top").addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
